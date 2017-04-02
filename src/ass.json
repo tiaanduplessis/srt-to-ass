@@ -19,7 +19,7 @@
 			"family": "Freesans",
 			"size": 64,
 			"scale": {
-				"x": 50,
+				"x": 100,
 				"y": 100
 			}
 		},
@@ -43,7 +43,7 @@
 		"alignment": 2,
 		"margin": {
 			"left": 5,
-			"right": 965,
+			"right": 5,
 			"vertical": 0
 		},
 		"encoding": 0
