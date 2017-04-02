@@ -1,9 +1,9 @@
 {
-  "name": "3dsub",
-  "version": "0.1.5",
-  "description": "Convert subtitles (SRT) to Advanced Substation Alpha (ASS) for correct output on 3D screens",
-  "homepage": "https://github.com/ChrisRM/node-3dsub",
-  "author": "Chris Magnussen <chris@codecandy.no> (http://codecandy.no/)",
+  "name": "srt-to-ass",
+  "version": "0.1.7",
+  "description": "Convert subtitles (SRT) to Advanced Substation Alpha (ASS)",
+  "homepage": "https://github.com/OwenRay/srt-to-ass",
+  "author": "Chris Magnussen <chris@codecandy.no> (http://codecandy.no/) & OwenRay",
   "license": "MIT",
   "main": "index.js",
   "bin": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChrisRM/node-3dsub.git"
+    "url": "https://github.com/OwenRay/srt-to-ass.git"
   },
   "keywords": [
     "srt",
@@ -22,7 +22,7 @@
     "subtitle"
   ],
   "bugs": {
-    "url": "https://github.com/ChrisRM/node-3dsub/issues"
+    "url": "https://github.com/OwenRay/srt-to-ass/issues"
   },
   "devDependencies": {
     "chai": "^2.1.1",
@@ -33,5 +33,6 @@
     "mustache": "^1.1.0",
     "moment": "^2.9.0",
     "striptags": "^3.0.1"
+	
   }
 }

@@ -10,6 +10,7 @@ var util = require('util');
 var path = require('path');
 var mustache = require('mustache');
 var _ = require('lodash');
+var striptags = require('striptags');
 
 var ASS = (function (m, fs, util, path, mustache)
 {
@@ -74,7 +75,7 @@ var ASS = (function (m, fs, util, path, mustache)
 					start: moment.utc(start).format(self.template.format.time),
 					end: moment.utc(end).format(self.template.format.time)
 				},
-				text: data[i + 3].trim().replace(/\n/g, '\\n\\N')
+				text: striptags(data[i + 3].trim()).replace(/\n/g, '\\N')
 			});
 
 			items.push(event);

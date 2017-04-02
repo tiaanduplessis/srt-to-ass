@@ -1,15 +1,15 @@
-3DSub
+Srt-to-ass
 =========
 
-Convert subtitles (SRT) to Advanced Substation Alpha (ASS) for correct output on 3D screens
+Convert subtitles (SRT) to Advanced Substation Alpha (ASS)
 
 ## Installation
 
-  npm install 3dsub
+  npm install srt-to-ass
 
 ## Usage
 
-  var sub = require('3dsub');
+  var sub = require('srt-to-ass');
   
   sub.convert('stubs/bighero.srt', 'bighero.ass');
 
@@ -17,7 +17,3 @@ Convert subtitles (SRT) to Advanced Substation Alpha (ASS) for correct output on
 
 In lieu of a formal styleguide, take care to maintain the existing coding style.
 Add unit tests for any new or changed functionality. Lint and test your code.
-
-## Release History
-
-* 0.1.4 Initial alpha release
