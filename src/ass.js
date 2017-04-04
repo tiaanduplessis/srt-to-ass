@@ -31,26 +31,38 @@ var ASS = (function (m, fs, util, path, mustache)
 
 	var _structured = [], _rendered = '';
 
-	ass.parse = function (_in, _out, _options)
+	ass.parse = function (_in, _out, _options, callback)
 	{
 		_.merge(defaults, _options);
 
-		this._raw = fs.readFileSync(_in);
+		fs.readFile(_in, function(err, result){
+			if(err) {
+				return callback(err);
+			}
+			this._raw = result;
+			_structured['info'] = defaults.info;
+			_structured['style'] = defaults.style;
+			_structured['events'] = this.buildEventData();
 
-		_structured['info'] = defaults.info;
-		_structured['style'] = defaults.style;
-		_structured['events'] = this.buildEventData();
+			this.render(function(err, result) {
+				if(err) {
+					return callback(err);
+				}
+				fs.writeFile(_out, result, callback);
+			});
+		}.bind(this));
 
-		_rendered = this.render();
-
-		fs.writeFile(_out, _rendered);
 	};
 
-	ass.render = function()
+	ass.render = function(callback)
 	{
-		var template = fs.readFileSync(path.resolve(__dirname, 'templates/ass.mustache'), 'UTF-8');
+		fs.readFile(path.resolve(__dirname, 'templates/ass.mustache'), 'UTF-8', function(err, result){
+			if(err) {
+				return callback(err);
+			}
+			callback(null, mustache.render(result, _structured));
+		});
 
-		return mustache.render(template, _structured);
 	};
 
 	ass.buildEventData = function()

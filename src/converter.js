@@ -2,9 +2,9 @@
 
 var ass = require('./ass');
 
-exports.convert = function (_in, _out, _options)
+exports.convert = function (_in, _out, _options, callback)
 {
 	_options = _options || {};
 
-	ass.parse(_in, _out, _options);
+	ass.parse(_in, _out, _options, callback);
 };

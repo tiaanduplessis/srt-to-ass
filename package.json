@@ -1,6 +1,6 @@
 {
   "name": "srt-to-ass",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Convert subtitles (SRT) to Advanced Substation Alpha (ASS)",
   "homepage": "https://github.com/OwenRay/srt-to-ass",
   "author": "Chris Magnussen <chris@codecandy.no> (http://codecandy.no/) & OwenRay",
