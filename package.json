@@ -29,7 +29,7 @@
     "mocha": "^2.2.0"
   },
   "dependencies": {
-    "lodash": "^3.4.0",
+    "lodash": "^4.17.16",
     "mustache": "^2.3.0",
     "moment": "^2.9.0",
     "striptags": "^3.0.1"
